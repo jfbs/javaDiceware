@@ -2,7 +2,14 @@ package diceware;
 
 public class RollDice {
     public static void main(String[] args) {
-        Dice d = new Dice();
-        System.out.println("Rolled: " + d.roll());
+        //int[] hand = new int[5];
+        String str = "";
+        for(int i = 0; i < 5; i++) {
+            Dice throwDie = new Dice();
+            //hand[i] = throwDie.roll();
+            str += throwDie.roll();
+        }
+        
+        System.out.println(str);
     }
 }
