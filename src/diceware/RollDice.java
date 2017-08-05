@@ -1,13 +1,11 @@
 package diceware;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.stream.Stream;
+import java.util.Scanner;
 
 public class RollDice {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         String str = "";
 
         for(int i = 0; i < 5; i++) {
@@ -17,11 +15,18 @@ public class RollDice {
 
         System.out.println(str);
 
-        try (Stream<String> lines = Files.lines(Paths.get("src/diceware/diceware.txt"))) {
-            String line32 = lines.skip(31).findFirst().get();
-            System.out.println(line32);
-        }  catch (IOException e) {
-            System.err.println("An IOException was caught :"+e.getMessage());
+        File file = new File("src/diceware/diceware.txt");
+        Scanner in = null;
+        try {
+            in = new Scanner(file);
+            while(in.hasNext()) {
+                String line=in.nextLine();
+                if(line.contains(str))
+                    System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
 
     }
