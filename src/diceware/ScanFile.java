@@ -1,5 +1,10 @@
 package diceware;
 
+/*
+Locate word that matches
+five dice rolled hands.
+*/
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -14,20 +19,18 @@ public class ScanFile {
     }
 
     public String getWord(String str) {
-
         try {
             Scanner in = new Scanner(file);
             while (in.hasNext()) {
                 String line = in.nextLine();
                 if (line.contains(str)) {
-                    needle = line;
+                    needle = line; // match
                 }
             }
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         return needle;
     }
 }

@@ -17,4 +17,5 @@ public class Dice {
     public int roll() {
         return this.side;
     }
+
 }
