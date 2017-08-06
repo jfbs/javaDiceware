@@ -3,7 +3,7 @@ package diceware;
 public class RollDice {
     public static void main(String[] args) {
         String hand, match, trimmed, passphrase;
-        int hands = 5;
+        int hands = 8;
         StringBuilder passBuilder = new StringBuilder();
 
         for(int j = 0; j < hands; j++) {
