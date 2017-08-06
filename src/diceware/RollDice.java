@@ -2,17 +2,22 @@ package diceware;
 
 public class RollDice {
     public static void main(String[] args) {
-        String str = "";
+        String hand = "";
+        String match = "";
 
         for(int i = 0; i < 5; i++) {
             Dice throwDie = new Dice();
-            str += throwDie.roll();
+            hand += throwDie.roll();
         }
 
-        System.out.println(str);
+        System.out.println(hand);
 
         ScanFile sf = new ScanFile();
-        System.out.println(sf.getWord(str));
-
+        match = sf.getWord(hand);
+        System.out.println(match);
+       // System.out.println(val.substring(1));
+        for (String retval: match.split(hand)) {
+            System.out.println("New: " + retval);
+        }
     }
 }
