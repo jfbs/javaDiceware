@@ -16,10 +16,10 @@ public class RollDice {
 
         ScanFile sf = new ScanFile();
         match = sf.getWord(hand);
-        System.out.println(match);
+        System.out.println(match.replace(hand, "").trim());
 
-        for (String retval: match.split(hand)) {
+        /*for (String retval: match.split(hand)) {
             System.out.println("New: " + retval);
-        }
+        }*/
     }
 }
