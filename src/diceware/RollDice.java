@@ -7,9 +7,7 @@ public class RollDice {
         StringBuilder passBuilder = new StringBuilder();
 
         for(int j = 0; j < hands; j++) {
-
             StringBuilder handBuilder = new StringBuilder();
-
             for (int i = 0; i < 5; i++) {
                 Dice throwDie = new Dice();
                 handBuilder.append(throwDie.roll());
