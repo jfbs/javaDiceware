@@ -14,10 +14,9 @@ public class ScanFile {
     }
 
     public String getWord(String str) {
-
-        Scanner in;
+        
         try {
-            in = new Scanner(file);
+            Scanner in = new Scanner(file);
             while (in.hasNext()) {
                 String line = in.nextLine();
                 if (line.contains(str)) {
