@@ -15,7 +15,7 @@ public class RollDice {
         ScanFile sf = new ScanFile();
         match = sf.getWord(hand);
         System.out.println(match);
-       // System.out.println(val.substring(1));
+
         for (String retval: match.split(hand)) {
             System.out.println("New: " + retval);
         }

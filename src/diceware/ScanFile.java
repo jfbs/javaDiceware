@@ -14,7 +14,7 @@ public class ScanFile {
     }
 
     public String getWord(String str) {
-        
+
         try {
             Scanner in = new Scanner(file);
             while (in.hasNext()) {
