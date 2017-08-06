@@ -5,8 +5,9 @@ public class RollDice {
         String hand;
         String match;
         String trimmed;
-        String passphrase = " ";
+        String passphrase;
         int hands = 5;
+        StringBuilder passBuilder = new StringBuilder();
 
         for(int j = 0; j < hands; j++) {
             StringBuilder handBuilder = new StringBuilder();
@@ -22,8 +23,10 @@ public class RollDice {
             match = sf.getWord(hand);
             trimmed = match.replace(hand, "").trim();
             //System.out.println(trimmed);
-            passphrase += trimmed + " ";
+
+            passBuilder.append(trimmed).append(" ");
         }
+        passphrase = passBuilder.toString();
 
         System.out.println(passphrase.trim());
 
