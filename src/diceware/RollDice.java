@@ -1,8 +1,5 @@
 package diceware;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
 public class RollDice {
     public static void main(String[] args) {
         String hand, match, trimmed, passphrase;
