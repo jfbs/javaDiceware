@@ -12,14 +12,11 @@ public class RollDice {
         }
         hand = handBuilder.toString();
 
-        System.out.println(hand);
+        //System.out.println(hand);
 
         ScanFile sf = new ScanFile();
         match = sf.getWord(hand);
         System.out.println(match.replace(hand, "").trim());
 
-        /*for (String retval: match.split(hand)) {
-            System.out.println("New: " + retval);
-        }*/
     }
 }
