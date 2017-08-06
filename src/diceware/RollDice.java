@@ -5,8 +5,6 @@ import java.text.NumberFormat;
 
 public class RollDice {
     public static void main(String[] args) {
-
-        final long startTime = System.currentTimeMillis();
         String hand, match, trimmed, passphrase;
         int hands = 8; // passphrase length
         StringBuilder passBuilder = new StringBuilder();
@@ -28,9 +26,5 @@ public class RollDice {
         passphrase = passBuilder.toString();
 
         System.out.println(passphrase.trim());
-
-        final long duration = System.currentTimeMillis() - startTime;
-        NumberFormat fmt = new DecimalFormat("#0.000");
-        System.out.print("runtime: " + fmt.format((duration)/1000d) + "s");
     }
 }
